@@ -13,69 +13,78 @@
 
 body {
   padding: 12px 0px;
-  width: 1440px;
-  height: 80px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
 
 
   .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 
 header {
-  width: 1200px;
-  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: auto;
+  background: #fff;
 
   .logo {
-    width: 1200px;
-    height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 
     a {
       font-family: var(--font4);
       font-weight: 600;
       font-size: 22px;
-      line-height: 82%;
-      letter-spacing: 0.04em;
-      text-align: center;
       text-decoration: none;
       color: #000;
-
       letter-spacing: 0.06em;
+      padding-right: 50px;
     }
 
     p {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: row;
       gap: 10px;
-      width: 261px;
-      height: 20px;
       font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 22px;
-      letter-spacing: 0.03em;
+      font-size: 20px;
       color: #000;
+      margin: 0;
+      flex-shrink: 1;
       margin-right: auto;
-      margin-left: 50px;
+
     }
 
     img {
-      width: 237px;
-      height: 54px;
+      width: 150px;
+      height: auto;
     }
   }
-
-
 }
+
 
 .display {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 30px;
 
 }
 
@@ -87,7 +96,9 @@ header {
   gap: 70px;
   padding: 10px;
   width: 385px;
-  height: 462px;
+  height: 532px;
+  position: sticky;
+  top: 48px;
 
   ul {
     padding: 0px;
@@ -101,33 +112,46 @@ header {
       gap: 10px;
 
       border-bottom: 1px solid #bdbdbd;
-      padding: 0px 0px 10px 0px;
       height: 58px;
       padding-top: 70px;
 
-      text {
+      h2 {
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 36px;
         line-height: 133%;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+        width: 370px;
         color: #000;
+        margin: 0px;
       }
     }
   }
 }
 
+/* 
+.svg-container {
+  position: relative;
+  width: 628px; 
+  height: 760px;
+
+  .svg{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+} */
+
+
 main {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 70px;
 
   padding: 0px 0px 90px 0px;
   width: 785px;
-  height: 2931px;
+  height: auto;
   padding-top: 98px;
 
   .introduction {
@@ -138,7 +162,7 @@ main {
     gap: 40px;
 
     width: 785px;
-    height: 308px;
+    height: auto;
   }
 
   .core-components {
@@ -149,7 +173,7 @@ main {
     gap: 40px;
 
     width: 785px;
-    height: 452px;
+    height: auto;
   }
 
   .react-fundamentals {
@@ -160,7 +184,7 @@ main {
     gap: 40px;
 
     width: 785px;
-    height: 1331px;
+    height: auto;
   }
 
   .handling-text-input {
@@ -171,7 +195,7 @@ main {
     gap: 40px;
 
     width: 785px;
-    height: 540px;
+    height: auto;
   }
 
   hr {
@@ -226,21 +250,21 @@ main {
     margin: 0px;
     text-decoration-skip-ink: none;
     line-height: 40px;
+  }
 
-    .line {
-      text-decoration: underline;
-    }
+  .line {
+    text-decoration: underline;
+  }
 
-    .italic {
-      font-style: italic;
-    }
+  .italic {
+    font-style: italic;
+  }
 
-    .weight {
-      font-weight: 700;
-    }
+  .weight {
+    font-weight: 700;
+  }
 
-    .gray-text {
-      background-color: #DADADA;
-    }
+  .gray-text {
+    background-color: #DADADA;
   }
 }
