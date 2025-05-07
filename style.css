@@ -60,7 +60,7 @@ header {
       padding-right: 50px;
     }
 
-    p {
+    .active {
       display: flex;
       align-items: center;
       justify-content: center;
